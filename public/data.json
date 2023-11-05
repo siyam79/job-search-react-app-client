@@ -1,0 +1,75 @@
+ [
+        {
+            "title": "Task 1",
+            "deadline": "2023-11-10",
+            "pricerange": "$100 - $150",
+            "description": "Complete project proposal for client A."
+        },
+        {
+            "title": "Task 2",
+            "deadline": "2023-11-15",
+            "pricerange": "$50 - $80",
+            "description": "Review and update marketing materials."
+        },
+        {
+            "title": "Task 3",
+            "deadline": "2023-11-20",
+            "pricerange": "$200 - $250",
+            "description": "Prepare financial report for the quarter."
+        },
+        {
+            "title": "Task 4",
+            "deadline": "2023-11-25",
+            "pricerange": "$75 - $100",
+            "description": "Schedule meetings with new clients."
+        },
+        {
+            "title": "Task 5",
+            "deadline": "2023-11-30",
+            "pricerange": "$120 - $180",
+            "description": "Research market trends and competition."
+        },
+        {
+            "title": "Task 6",
+            "deadline": "2023-12-05",
+            "pricerange": "$90 - $130",
+            "description": "Update the company website."
+        },
+        {
+            "title": "Task 7",
+            "deadline": "2023-12-10",
+            "pricerange": "$150 - $200",
+            "description": "Write a blog post on industry insights."
+        },
+        {
+            "title": "Task 8",
+            "deadline": "2023-12-15",
+            "pricerange": "$60 - $90",
+            "description": "Conduct product quality checks."
+        },
+        {
+            "title": "Task 9",
+            "deadline": "2023-12-20",
+            "pricerange": "$100 - $140",
+            "description": "Prepare presentation for team meeting."
+        },
+        {
+            "title": "Task 10",
+            "deadline": "2023-12-25",
+            "pricerange": "$80 - $120",
+            "description": "Collaborate with the design team on a new project."
+        },
+        {
+            "title": "Task 11",
+            "deadline": "2023-12-30",
+            "pricerange": "$110 - $160",
+            "description": "Attend a conference and network with industry peers."
+        },
+        {
+            "title": "Task 12",
+            "deadline": "2024-01-05",
+            "pricerange": "$70 - $100",
+            "description": "Implement software updates and improvements."
+        }
+    ]
+
