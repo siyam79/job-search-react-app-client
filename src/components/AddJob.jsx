@@ -1,6 +1,13 @@
 import { ToastContainer, } from "react-toastify";
+import useAuth from "../Hooks/useAuth";
 
 const AddJob = () => {
+
+    const {user} = useAuth()
+
+const userEmail = user.email
+console.log(userEmail);
+
 
     const handleAddProducts = (e) => {
         e.preventDefault();
@@ -11,16 +18,16 @@ const AddJob = () => {
         const description = form.description.value;
         const deadline = form.deadline.value;
         const category = form.category.value;
+        const email = form.email.value;
 
-        // console.log(name, imgage, price, description, rating);
-
+        
         const addJob = {
             title,
             deadline,
             priceRange,
             description,
-            category
-
+            category,
+            email
         };
         console.log(addJob);
 
@@ -63,13 +70,16 @@ const AddJob = () => {
                             <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder=" Job Title " name="title" required />
                         </div>
 
-
+                        <div className="mb-4  w-full ">
+                            <label className="block  text-md font-semibold mb-2 " htmlFor=""> Email </label>
+                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="" defaultValue={userEmail} readOnly name="email" required />
+                        </div>
                     </div>
 
                     <div className=" gap-4 ">
                         <div className="mb-4 w-full ">
                             <label className="block   text-md font-semibold mb-2 " htmlFor=""> Price Range </label>
-                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="number" placeholder="Price Range " name="priceRange" required />
+                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="Price Range " name="priceRange" required />
                         </div>
 
                         <div className="mb-4">
@@ -85,7 +95,7 @@ const AddJob = () => {
                         </div>
                         <div className="mb-4 w-full ">
                             <label className="block text-md font-semibold mb-2 " htmlFor=""> Dead Line  </label>
-                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder=" Dead Line "  name="deadline" required />
+                            <input  className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="date" placeholder=" Dead Line "   name="deadline" required />
                         </div>
                     </div>
 

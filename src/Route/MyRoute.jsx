@@ -8,51 +8,50 @@ import BidRequest from "../components/BidRequest";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import ErrorElements from "../components/ErrorElements";
-import AllJob from "../Pages/AllJob";
+import PrivateRoute from "../Provider/PrivateRoute";
+
 
 const MyRoute = createBrowserRouter([
     {
-        path : '/',
-        element : <Mainlayout></Mainlayout>,
-        errorElement:<ErrorElements></ErrorElements>,
-        children : [
+        path: '/',
+        element: <Mainlayout></Mainlayout>,
+        errorElement: <ErrorElements></ErrorElements>,
+        children: [
             {
-                path :'/',
-               element : <Home></Home>
+                path: '/',
+                element: <Home></Home>,
+                loader: () => fetch('http://localhost:5000/getJob')
             },
             {
-                path : '/addjob',
-                element : <AddJob></AddJob>
+                path: '/addjob',
+                element:<PrivateRoute> <AddJob></AddJob></PrivateRoute>
             },
             {
-                path:'/mypostedjob',
-                element :<MyPostedJob></MyPostedJob>
+                path: '/mypostedjob',
+                element: <MyPostedJob></MyPostedJob>
             },
             {
-                path : '/mybids',
-                element:<MyBids></MyBids>
+                path: '/mybids',
+                element: <MyBids></MyBids>
             },
             {
-                path : '/bidrequest',
-                element:<BidRequest></BidRequest>
+                path: '/bidrequest',
+                element: <BidRequest></BidRequest>
             },
             {
-                path : '/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path : '/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
-            {
-                path : '/alljob',
-                element:<AllJob></AllJob>,
-                loader:()=>fetch('http://localhost:5000/getJob')
-            },
+           
+           
         ]
 
     },
-    
+
 ])
 
 export default MyRoute;
