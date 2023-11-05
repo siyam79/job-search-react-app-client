@@ -1,74 +1,89 @@
  [
         {
-            "title": "Task 1",
+            "title": "Front-End Developer",
             "deadline": "2023-11-10",
             "pricerange": "$100 - $150",
-            "description": "Complete project proposal for client A."
+            "category":"Web Development",
+            "description": "Front-end development, also known as client-side development, focuses on creating the user interface and user experience of a website or web application"
         },
         {
-            "title": "Task 2",
+            "title": "Back-End Developer",
             "deadline": "2023-11-15",
-            "pricerange": "$50 - $80",
-            "description": "Review and update marketing materials."
+            "pricerange": "$250 - $280",
+            "category":"Web Development",
+            "description": "Back-end development, also known as server-side development, is responsible for the server-side logic and functionality that powers a website or web application."
         },
         {
-            "title": "Task 3",
+            "title": "Full-Stack Developer",
             "deadline": "2023-11-20",
             "pricerange": "$200 - $250",
-            "description": "Prepare financial report for the quarter."
+            "category":"Web Development",
+            "description": "A full-stack developer is a professional who is proficient in both front-end and back-end development. They are capable of working on all aspects of a web application, "
         },
         {
-            "title": "Task 4",
+            "title": "UI/UX Designer",
             "deadline": "2023-11-25",
             "pricerange": "$75 - $100",
-            "description": "Schedule meetings with new clients."
+            "category":"Web Development",
+            "description": " UI/UX (User Interface/User Experience) designers play a critical role in creating web and mobile applications that are not only visually appealing but also user-friendly and intuitive. "
         },
         {
-            "title": "Task 5",
+            "title": "Digital Marketing Manager",
             "deadline": "2023-11-30",
             "pricerange": "$120 - $180",
+            "category":"Digital Marketing",
             "description": "Research market trends and competition."
         },
         {
-            "title": "Task 6",
+            "title": "Content Marketing Manager",
             "deadline": "2023-12-05",
             "pricerange": "$90 - $130",
+            "category":"Digital Marketing",
             "description": "Update the company website."
         },
         {
-            "title": "Task 7",
+            "title": "Social Media Manager",
             "deadline": "2023-12-10",
             "pricerange": "$150 - $200",
+            "category":"Digital Marketing",
             "description": "Write a blog post on industry insights."
         },
         {
-            "title": "Task 8",
+            "title": "SEO Specialist",
             "deadline": "2023-12-15",
-            "pricerange": "$60 - $90",
+            "pricerange": "$260 - $290",
+            "category":"Digital Marketing",
             "description": "Conduct product quality checks."
         },
+
+
+
         {
-            "title": "Task 9",
+            "title": "Logo Designer",
             "deadline": "2023-12-20",
             "pricerange": "$100 - $140",
+            "category":"Graphics Design",
             "description": "Prepare presentation for team meeting."
         },
         {
-            "title": "Task 10",
+            "title": "Motion Graphics Designer",
             "deadline": "2023-12-25",
-            "pricerange": "$80 - $120",
+            "pricerange": "$280 - $320",
+            "category":"Graphics Design",
             "description": "Collaborate with the design team on a new project."
         },
         {
-            "title": "Task 11",
+            "title": "Graphic Designer",
             "deadline": "2023-12-30",
             "pricerange": "$110 - $160",
+            "category":"Graphics Design",
             "description": "Attend a conference and network with industry peers."
         },
         {
-            "title": "Task 12",
+            "title": "Digital Artist",
             "deadline": "2024-01-05",
-            "pricerange": "$70 - $100",
+            "pricerange": "$170 - $200",
+            "category":"Graphics Design",
             "description": "Implement software updates and improvements."
         }
     ]

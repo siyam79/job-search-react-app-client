@@ -8,6 +8,7 @@ import BidRequest from "../components/BidRequest";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import ErrorElements from "../components/ErrorElements";
+import AllJob from "../Pages/AllJob";
 
 const MyRoute = createBrowserRouter([
     {
@@ -42,6 +43,11 @@ const MyRoute = createBrowserRouter([
             {
                 path : '/register',
                 element:<Register></Register>
+            },
+            {
+                path : '/alljob',
+                element:<AllJob></AllJob>,
+                loader:()=>fetch('http://localhost:5000/getJob')
             },
         ]
 
