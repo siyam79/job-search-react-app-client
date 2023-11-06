@@ -9,6 +9,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import ErrorElements from "../components/ErrorElements";
 import PrivateRoute from "../Provider/PrivateRoute";
+import JobDetails from "../components/JobDetails";
 
 
 const MyRoute = createBrowserRouter([
@@ -24,7 +25,7 @@ const MyRoute = createBrowserRouter([
             },
             {
                 path: '/addjob',
-                element:<PrivateRoute> <AddJob></AddJob></PrivateRoute>
+                element: <PrivateRoute> <AddJob></AddJob></PrivateRoute>
             },
             {
                 path: '/mypostedjob',
@@ -46,8 +47,13 @@ const MyRoute = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
             },
-           
-           
+            {
+                path: '/job/:id',
+                element: <JobDetails></JobDetails>,
+               loader: ({params}) => fetch(`http://localhost:5000/job/${params.id}`)
+            },
+
+
         ]
 
     },
