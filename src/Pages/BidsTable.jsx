@@ -13,11 +13,8 @@ const BidsTable = ({ bid }) => {
             <td>
                 {title}
             </td>
-            <td>
-
-            </td>
             <td>{email}</td>
-            <td>{email}</td>
+            <td>{deadline}</td>
             <th>
                 <button className="btn btn-ghost btn-xs">details</button>
             </th>
