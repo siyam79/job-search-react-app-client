@@ -2,58 +2,78 @@
         {
             "title": "Front-End Developer",
             "deadline": "2023-11-10",
-            "pricerange": "$100 - $150",
+            "minimumPrice": "100",
+            "maximumPrice": "150",
+            "email" :"www@gmail.com",
             "category":"Web Development",
             "description": "Front-end development, also known as client-side development, focuses on creating the user interface and user experience of a website or web application"
         },
         {
             "title": "Back-End Developer",
             "deadline": "2023-11-15",
-            "pricerange": "$250 - $280",
+            "minimumPrice": "300",
+            "maximumPrice": "350",
+            "email" :"www@gmail.com",
             "category":"Web Development",
             "description": "Back-end development, also known as server-side development, is responsible for the server-side logic and functionality that powers a website or web application."
         },
         {
             "title": "Full-Stack Developer",
             "deadline": "2023-11-20",
-            "pricerange": "$200 - $250",
+            "minimumPrice": "500",
+            "maximumPrice": "600",
+            "email" :"www@gmail.com",
             "category":"Web Development",
             "description": "A full-stack developer is a professional who is proficient in both front-end and back-end development. They are capable of working on all aspects of a web application, "
         },
         {
             "title": "UI/UX Designer",
             "deadline": "2023-11-25",
-            "pricerange": "$75 - $100",
+            "minimumPrice": "300",
+            "maximumPrice": "350",
+            "email" :"www@gmail.com",
             "category":"Web Development",
             "description": " UI/UX (User Interface/User Experience) designers play a critical role in creating web and mobile applications that are not only visually appealing but also user-friendly and intuitive. "
         },
+
+
+
+
         {
             "title": "Digital Marketing Manager",
             "deadline": "2023-11-30",
-            "pricerange": "$120 - $180",
+            "minimumPrice": "350",
+            "maximumPrice": "400",
+            "email" :"www@gmail.com",
             "category":"Digital Marketing",
-            "description": "Research market trends and competition."
+            "description": "A Digital Marketing Manager is responsible for planning, executing, and overseeing digital marketing campaigns to promote a brand, products, or services online"
         },
         {
             "title": "Content Marketing Manager",
             "deadline": "2023-12-05",
-            "pricerange": "$90 - $130",
+            "minimumPrice": "500",
+            "maximumPrice": "550",
+            "email" :"www@gmail.com",
             "category":"Digital Marketing",
-            "description": "Update the company website."
+            "description": "A Content Marketing Manager is responsible for creating and overseeing a content marketing strategy that promotes a brand, products, or services"
         },
         {
             "title": "Social Media Manager",
             "deadline": "2023-12-10",
-            "pricerange": "$150 - $200",
+            "minimumPrice": "200",
+            "maximumPrice": "350",
+            "email" :"www@gmail.com",
             "category":"Digital Marketing",
-            "description": "Write a blog post on industry insights."
+            "description": "A Social Media Manager is responsible for creating, implementing, and managing a brand's social media strategy and online presence on various social platforms."
         },
         {
             "title": "SEO Specialist",
             "deadline": "2023-12-15",
-            "pricerange": "$260 - $290",
+            "minimumPrice": "400",
+            "maximumPrice": "450",
+            "email" :"www@gmail.com",
             "category":"Digital Marketing",
-            "description": "Conduct product quality checks."
+            "description": "An SEO (Search Engine Optimization) Specialist is responsible for optimizing a website's visibility in search engine results, such as Google, Bing, and Yahoo"
         },
 
 
@@ -61,30 +81,38 @@
         {
             "title": "Logo Designer",
             "deadline": "2023-12-20",
-            "pricerange": "$100 - $140",
+            "minimumPrice": "280",
+            "maximumPrice": "320",
+            "email" :"www@gmail.com",
             "category":"Graphics Design",
-            "description": "Prepare presentation for team meeting."
+            "description": " A Logo Designer is a graphic designer specializing in creating visual brand identities through the design of logos and other visual elements."
         },
         {
             "title": "Motion Graphics Designer",
             "deadline": "2023-12-25",
-            "pricerange": "$280 - $320",
+            "minimumPrice": "600",
+            "maximumPrice": "750",
+            "email" :"www@gmail.com",
             "category":"Graphics Design",
-            "description": "Collaborate with the design team on a new project."
+            "description": "A Motion Graphics Designer is a creative professional who specializes in creating animated visual content, combining graphic design, animation"
         },
         {
             "title": "Graphic Designer",
             "deadline": "2023-12-30",
-            "pricerange": "$110 - $160",
+            "minimumPrice": "100",
+            "maximumPrice": "350",
+            "email" :"www@gmail.com",
             "category":"Graphics Design",
-            "description": "Attend a conference and network with industry peers."
+            "description": "A Graphic Designer is a creative professional who specializes in visual communication, creating visual concepts and designs for various media, such as print, digital"
         },
         {
             "title": "Digital Artist",
             "deadline": "2024-01-05",
-            "pricerange": "$170 - $200",
+            "minimumPrice": "500",
+            "maximumPrice": "750",
+            "email" :"www@gmail.com",
             "category":"Graphics Design",
-            "description": "Implement software updates and improvements."
+            "description": "A Digital Artist is a creative professional who uses digital tools and software to create visual art, illustrations, and designs. Digital art  range of styles and mediums,"
         }
     ]
 

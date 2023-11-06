@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 
 const Job = ({ job }) => {
-    const { title, deadline, description, pricerange } = job || {};
+    const { title, deadline, description,  minimumPrice, maximumPrice, } = job || {};
+    // console.log({minimumPrice});
     return (
         <div>
             <div className="card w-96 bg-base-100 h-[300px] shadow-xl ">
@@ -15,7 +16,10 @@ const Job = ({ job }) => {
                     <p>{description}</p>
                     <div className=" justify-end">
                         <div className=" flex ">
-                            <p className="text-xl font-bold "> {pricerange}  </p>
+                            
+                           
+                           <p className="text-xl font-bold "> <span>${minimumPrice} </span> - $<span>{maximumPrice}</span> </p>
+                          
                             <button className="badge badge-outline px-6 py-4 font-bold text-lg "> Bid Now  </button> </div>
                     </div>
 

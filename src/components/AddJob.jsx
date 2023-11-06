@@ -3,10 +3,10 @@ import useAuth from "../Hooks/useAuth";
 
 const AddJob = () => {
 
-    const {user} = useAuth()
+    const { user } = useAuth()
 
-const userEmail = user.email
-console.log(userEmail);
+    const userEmail = user.email
+    console.log(userEmail);
 
 
     const handleAddProducts = (e) => {
@@ -14,17 +14,19 @@ console.log(userEmail);
 
         const form = e.target;
         const title = form.title.value;
-        const pricerange = form.pricerange.value;
+        const minimumPrice = form.minimumPrice.value;
+        const maximumPrice = form.maximumPrice.value;
         const description = form.description.value;
         const deadline = form.deadline.value;
         const category = form.category.value;
         const email = form.email.value;
 
-        
+
         const addJob = {
             title,
             deadline,
-            pricerange,
+            minimumPrice,
+            maximumPrice,
             description,
             category,
             email
@@ -37,7 +39,7 @@ console.log(userEmail);
                 'content-type': "application/json",
             },
             body: JSON.stringify(addJob)
-        }) .then(res => res.json())
+        }).then(res => res.json())
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
@@ -48,24 +50,6 @@ console.log(userEmail);
                 form.reset()
             })
 
-
-        // fetch('http://localhost:5000/addJob', {
-        //     method: "POST",
-        //     headers: {
-        //         "content-type": "application/json",
-        //     },
-        //     body: JSON.stringify(addJob),
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             toast.success(" Products Add Success Full ", {
-        //                 position: "top-center"
-        //             })
-        //         }
-        //         form.reset()
-        //     })
     }
 
     return (
@@ -86,9 +70,15 @@ console.log(userEmail);
                     </div>
 
                     <div className=" gap-4 ">
-                        <div className="mb-4 w-full ">
-                            <label className="block   text-md font-semibold mb-2 " htmlFor=""> Price Range </label>
-                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="Price Range " name="pricerange" required />
+                        <div className="lg:flex gap-4 ">
+                            <div className="mb-4 w-full ">
+                                <label className="block   text-md font-semibold mb-2 " htmlFor=""> Minimum Price </label>
+                                <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="number" placeholder="Minimum Price" name="minimumPrice" required />
+                            </div>
+                            <div className="mb-4 w-full ">
+                                <label className="block   text-md font-semibold mb-2 " htmlFor=""> Maximum Price </label>
+                                <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="number" placeholder="Maximum Price" name="maximumPrice" required />
+                            </div>
                         </div>
 
                         <div className="mb-4">
@@ -104,7 +94,7 @@ console.log(userEmail);
                         </div>
                         <div className="mb-4 w-full ">
                             <label className="block text-md font-semibold mb-2 " htmlFor=""> Dead Line  </label>
-                            <input  className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="date" placeholder=" Dead Line "   name="deadline" required />
+                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="date" placeholder=" Dead Line " name="deadline" required />
                         </div>
                     </div>
 
