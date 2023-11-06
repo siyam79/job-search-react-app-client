@@ -14,6 +14,7 @@ import JobDetails from "../components/JobDetails";
 
 
 
+
 const MyRoute = createBrowserRouter([
     {
         path: '/',
@@ -35,7 +36,7 @@ const MyRoute = createBrowserRouter([
             },
             {
                 path: '/mybids',
-                element: <MyBids></MyBids>
+                element:<PrivateRoute> <MyBids></MyBids></PrivateRoute>
                
             },
             {
@@ -55,6 +56,7 @@ const MyRoute = createBrowserRouter([
                 element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
                loader: ({params}) => fetch(`http://localhost:5000/job/${params.id}`)
             },
+           
 
 
         ]
