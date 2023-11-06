@@ -1,4 +1,4 @@
-import { ToastContainer, } from "react-toastify";
+import { ToastContainer, toast, } from "react-toastify";
 import useAuth from "../Hooks/useAuth";
 
 const AddJob = () => {
@@ -14,7 +14,7 @@ console.log(userEmail);
 
         const form = e.target;
         const title = form.title.value;
-        const priceRange = form.priceRange.value;
+        const pricerange = form.pricerange.value;
         const description = form.description.value;
         const deadline = form.deadline.value;
         const category = form.category.value;
@@ -24,7 +24,7 @@ console.log(userEmail);
         const addJob = {
             title,
             deadline,
-            priceRange,
+            pricerange,
             description,
             category,
             email
@@ -37,7 +37,16 @@ console.log(userEmail);
                 'content-type': "application/json",
             },
             body: JSON.stringify(addJob)
-        })
+        }) .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast.success(" Job Add Success Full ", {
+                        position: "top-center"
+                    })
+                }
+                form.reset()
+            })
 
 
         // fetch('http://localhost:5000/addJob', {
@@ -62,7 +71,7 @@ console.log(userEmail);
     return (
         <div>
             <div className=" lg:w-1/2 mx-auto pt-1  bg-base-300 rounded-lg shadow-3xl mt-1 ">
-                <h2 className="text-3xl text-center text-fuchsia-800 font-bold mb-6 mt-10 "> Add Job  </h2>
+                <h2 className="text-3xl text-center text-fuchsia-800 font-bold mb-6 mt-10 ">  Add Job  </h2>
                 <form onSubmit={handleAddProducts} className="px-2">
                     <div className=" lg:flex gap-4 ">
                         <div className="mb-4  w-full ">
@@ -79,7 +88,7 @@ console.log(userEmail);
                     <div className=" gap-4 ">
                         <div className="mb-4 w-full ">
                             <label className="block   text-md font-semibold mb-2 " htmlFor=""> Price Range </label>
-                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="Price Range " name="priceRange" required />
+                            <input className=" w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " type="text" placeholder="Price Range " name="pricerange" required />
                         </div>
 
                         <div className="mb-4">
