@@ -12,6 +12,8 @@ import PrivateRoute from "../Provider/PrivateRoute";
 import JobDetails from "../components/JobDetails";
 
 
+
+
 const MyRoute = createBrowserRouter([
     {
         path: '/',
@@ -34,6 +36,7 @@ const MyRoute = createBrowserRouter([
             {
                 path: '/mybids',
                 element: <MyBids></MyBids>
+               
             },
             {
                 path: '/bidrequest',
