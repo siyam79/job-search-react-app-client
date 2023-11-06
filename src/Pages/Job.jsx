@@ -17,13 +17,11 @@ const Job = ({ job }) => {
                     <p>{description}</p>
                     <div className=" justify-end">
                         <div className=" flex ">
-
-
                             <p className="text-xl font-bold "> Price <span>${minimumPrice} </span> - $<span>{maximumPrice}</span> </p>
-
                             <Link to={`/job/${_id}`}>
-                            <button className="badge badge-outline px-6 py-4 font-bold text-lg "> Bid Now  </button>
-                            </Link> </div>
+                                <button className="badge badge-outline px-6 py-4 font-bold text-lg "> Bid Now  </button>
+                            </Link>
+                        </div>
                     </div>
 
                 </div>
