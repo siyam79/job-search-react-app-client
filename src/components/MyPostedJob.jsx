@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
+import PostedJob from "../Pages/PostedJob/PostedJob";
+
 
 
 const MyPostedJob = () => {
@@ -8,20 +10,22 @@ const MyPostedJob = () => {
     const { user } = useAuth()
     console.log(user);
 
-    const [myPostJob, setMyPostJob] = useState([])
+    const [myPostJobs, setmyPostJobs] = useState([])
 
     const url = `http://localhost:5000/job?email=${user?.email}`
 
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
-            .then(data => setMyPostJob(data))
+            .then(data => setmyPostJobs(data))
     }, [url])
-    console.log(myPostJob);
+    console.log(myPostJobs);
 
     return (
-        <div>
-        <h1> my post job {myPostJob.length} </h1>
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
+            {
+                myPostJobs?.map(mypostJob => <PostedJob key={mypostJob._id} mypostJob={mypostJob}></PostedJob>)
+            }
         </div>
     );
 };
