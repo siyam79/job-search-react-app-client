@@ -1,23 +1,23 @@
 
 
-import { GithubAuthProvider, GoogleAuthProvider,  createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import { createContext, useEffect, useState,  } from "react";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createContext, useEffect, useState, } from "react";
 import PropTypes from 'prop-types';
 import { auth } from "../Config/firebase.Config";
-
+import axios from "axios";
 export const AuthContext = createContext(null)
 
 
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState({});
-    const [loading , setLoading] =useState(true);
+    const [loading, setLoading] = useState(true);
 
 
 
     const githubProvider = new GithubAuthProvider();
     const googleProvider = new GoogleAuthProvider();
-  
+
 
     // google login  
 
@@ -33,15 +33,15 @@ const AuthProvider = ({ children }) => {
 
 
 
-    const handleUpdateProfile =( name , photo )=>{
-        return updateProfile(auth.currentUser,{
-            displayName: name , photoURL: photo 
+    const handleUpdateProfile = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
 
         })
     }
 
 
-    
+
     //   create User 
 
     const createUser = (email, password) => {
@@ -60,26 +60,67 @@ const AuthProvider = ({ children }) => {
 
     const logOut = () => {
         return signOut(auth);
-            
+
     }
+
+
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            const userEmail = currentUser?.email || user?.email;
+            const loggedUser = { email: userEmail };
+            setUser(currentUser);
+            console.log("current user", currentUser);
+            setLoading(false);
+            // if user exists then issue a token
+            if (currentUser) {
+
+                axios.post("http://localhost:5000/jwt", loggedUser, {
+                    withCredentials: true,
+                })
+                    .then((res) => {
+                        console.log("token response", res.data);
+                    });
+            } else {
+                axios
+                    .post("http://localhost:5000/logout", loggedUser, {
+                        withCredentials: true,
+                    })
+                    .then((res) => {
+                        console.log(res.data);
+                    });
+            }
+        });
+        return () => {
+            return unsubscribe();
+        };
+    }, []);
+
+
+
+
+
+
+
+
 
 
     // using Obseverb    ata  user ke  deka suna kore  
 
-    useEffect(() => {
-        const unSubcribe = onAuthStateChanged(auth, (user) => {
-            setUser(user);
-           setLoading(false)
+    // useEffect(() => {
+    //     const unSubcribe = onAuthStateChanged(auth, (user) => {
+    //         setUser(user);
+    //        setLoading(false)
 
-        });
-        return () => {
-            unSubcribe()
-            
-        }
-    }, []);
+    //     });
+    //     return () => {
+    //         unSubcribe()
+
+    //     }
+    // }, []);
 
     // console.log(user);
-    
+
     const authInformatiopn = {
         googleLogin,
         githubLogin,

@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-// import PostedJob from "../Pages/PostedJob/PostedJob";
-
-
 
 const MyPostedJob = () => {
 
@@ -71,16 +68,16 @@ const MyPostedJob = () => {
                             <h2 className="card-title truncate">
                                 {job.title}
                             </h2>
-                            <div className="badge badge-secondary"> Date : {job.deadline} </div>
+                            <div className="badge badge-secondary py-4 font-bold "> Date : {job.deadline} </div>
                             <p> {job.description} </p>
                             <div>
                                 <p className="text-xl font-bold "> Salary : <span>${job.minimumPrice} </span> - $<span>{job.maximumPrice}</span> </p>
                             </div>
-                            <div className="card-actions justify-end">
+                            <div className="card-actions items-center justify-end">
                                 <Link to={`/updateJob/${job._id}`}>
-                                    <div className="badge badge-outline"> Update </div>
+                                    <div className="badge badge-outline px-4 py-4 "> Update </div>
                                 </Link>
-                                <div onClick={()=> handleDelete(job._id)} className="badge badge-outline"> Delete </div>
+                                <div onClick={()=> handleDelete(job._id)} className="badge badge-outline px-4 py-4 cursor-pointer "> Delete </div>
                             </div>
                         </div>
                     </div>
