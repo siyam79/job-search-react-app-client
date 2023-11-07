@@ -4,7 +4,6 @@ import Banner from "../Pages/Banner";
 import TabJobs from "../Pages/TabJobs";
 import Blogs from "../Pages/Blogs";
 import Feautres from "../Pages/Feautres";
-import Table from "../Pages/Table";
 
 const Home = () => {
     const jobs = useLoaderData()
@@ -16,7 +15,7 @@ const Home = () => {
             <About></About>
             <Blogs></Blogs>
             <Feautres></Feautres>
-            <Table></Table>
+            
         </div>
     );
 };

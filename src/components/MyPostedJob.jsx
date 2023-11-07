@@ -10,7 +10,9 @@ const MyPostedJob = () => {
     const { user } = useAuth()
     console.log(user);
 
+
     const [myPostJobs, setmyPostJobs] = useState([])
+    // const [deletejob ,setDeleteJob] = useState(myPostJobs)
 
     const url = `http://localhost:5000/job?email=${user?.email}`
 
@@ -20,14 +22,17 @@ const MyPostedJob = () => {
             .then(data => setmyPostJobs(data))
     }, [url])
     console.log(myPostJobs);
-
     return (
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
             {
-                myPostJobs?.map(mypostJob => <PostedJob key={mypostJob._id} mypostJob={mypostJob}></PostedJob>)
+                myPostJobs?.map(mypostJob => <PostedJob key={mypostJob._id} mypostJob={mypostJob}
+                //    deletejob = {deletejob}
+                //    setDeleteJob={setDeleteJob}
+                ></PostedJob>)
             }
         </div>
     );
+
 };
 
 export default MyPostedJob;
