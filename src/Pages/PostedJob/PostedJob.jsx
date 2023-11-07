@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 const PostedJob = ({ mypostJob }) => {
     console.log(mypostJob);
 
-    const { title, deadline, minimumPrice, maximumPrice, description } = mypostJob || {};
-
+    const { title, deadline, minimumPrice, maximumPrice, description , _id } = mypostJob || {};
     return (
         <div>
             <div className="card w-96 h-[300px] bg-base-100 shadow-xl">
@@ -20,7 +19,7 @@ const PostedJob = ({ mypostJob }) => {
                         <p className="text-xl font-bold "> Salary : <span>${minimumPrice} </span> - $<span>{maximumPrice}</span> </p>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link>
+                        <Link to={`updateJob/${_id}`}>
                             <div className="badge badge-outline"> Update </div>
                         </Link>
                         <div className="badge badge-outline"> Delete </div>

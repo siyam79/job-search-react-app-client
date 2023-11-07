@@ -10,6 +10,7 @@ import Register from "../components/Register";
 import ErrorElements from "../components/ErrorElements";
 import PrivateRoute from "../Provider/PrivateRoute";
 import JobDetails from "../components/JobDetails";
+import UpdateJob from "../Pages/PostedJob/UpdateJob";
 
 
 
@@ -54,6 +55,11 @@ const MyRoute = createBrowserRouter([
             {
                 path: '/job/:id',
                 element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
+               loader: ({params}) => fetch(`http://localhost:5000/job/${params.id}`)
+            },
+            {
+                path: '/updateJob/:id',
+                element: <PrivateRoute><UpdateJob></UpdateJob></PrivateRoute>,
                loader: ({params}) => fetch(`http://localhost:5000/job/${params.id}`)
             },
            
