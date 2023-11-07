@@ -1,8 +1,10 @@
 import { ToastContainer, toast, } from "react-toastify";
 import useAuth from "../Hooks/useAuth";
+import {  useNavigate } from "react-router-dom";
+
 
 const AddJob = () => {
-
+    const navegate = useNavigate()
     const { user } = useAuth()
 
     const userEmail = user.email
@@ -46,8 +48,12 @@ const AddJob = () => {
                     toast.success(" Job Add Success Full ", {
                         position: "top-center"
                     })
+                    setTimeout(() => {
+                        navegate('/mypostedjob')
+                    }, 1000);
+                    // form.reset()
                 }
-                form.reset()
+
             })
 
     }
@@ -86,10 +92,9 @@ const AddJob = () => {
                                 Category
                             </label>
                             <select className="w-full px-4 py-2 text-white border rounded-lg bg-gray-800 focus:outline-none focus:border-blue-500 " id="category" name="category" required>
-
                                 <option value="Web Development">Web Development</option>
                                 <option value="Digital Marketing">Digital Marketing </option>
-                                <option value="Digital Marketing">Graphics Design </option>
+                                <option value="Graphics Design">Graphics Design </option>
                             </select>
                         </div>
                         <div className="mb-4 w-full ">
@@ -105,7 +110,7 @@ const AddJob = () => {
                     </div>
 
                     <div className=" text-center justify-center  pb-6 ">
-                        <button type="submit" className=" w-40 rounded-lg  text-white bg-pink-800 hover:bg-pink-500 py-2 "> Add Products </button>
+                            <button type="submit" className=" w-40 rounded-lg  text-white bg-pink-800 hover:bg-pink-500 py-2 "> Add Job</button>
                     </div>
                 </form>
 

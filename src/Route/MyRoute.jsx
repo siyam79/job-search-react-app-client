@@ -32,7 +32,7 @@ const MyRoute = createBrowserRouter([
             },
             {
                 path: '/mypostedjob',
-                element: <MyPostedJob></MyPostedJob>
+                element: <PrivateRoute><MyPostedJob></MyPostedJob></PrivateRoute>
             },
             {
                 path: '/mybids',
