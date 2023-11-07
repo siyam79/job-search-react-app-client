@@ -19,7 +19,7 @@ const PostedJob = ({ mypostJob }) => {
                         <p className="text-xl font-bold "> Salary : <span>${minimumPrice} </span> - $<span>{maximumPrice}</span> </p>
                     </div>
                     <div className="card-actions justify-end">
-                        <Link to={`updateJob/${_id}`}>
+                        <Link to={`/updateJob/${_id}`}>
                             <div className="badge badge-outline"> Update </div>
                         </Link>
                         <div className="badge badge-outline"> Delete </div>
