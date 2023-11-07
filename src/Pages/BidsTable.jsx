@@ -10,27 +10,8 @@ const BidsTable = ({ bid }) => {
             <h5 className="w-full mr-10">{email}</h5>
             <h5 className="w-full mr-10">{deadline}</h5>
             <button> Approve </button>
-
-
         </div>
 
-
-
-
-
-        // <tr>
-        //     <th>
-
-        //     </th>
-        //     <td>
-        //         {title}
-        //     </td>
-        //     <td>{email}</td>
-        //     <td>{deadline}</td>
-        //     <th>
-        //         <button className="btn btn-ghost btn-xs">details</button>
-        //     </th>
-        // </tr>
     );
 };
 BidsTable.propTypes = {

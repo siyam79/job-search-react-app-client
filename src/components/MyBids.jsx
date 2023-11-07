@@ -32,7 +32,7 @@ const MyBids = () => {
 
                                 </div>
                                 <div className=" flex items-center justify-around  w-1/2 mx-auto  ">
-                                    <h5 className="ml-20 ">Date </h5>
+                                    <h5 className="ml-20">Date </h5>
                                     <h5 className=""> Status </h5>
                                 </div>
                             </div>
@@ -40,13 +40,7 @@ const MyBids = () => {
                         <div className="flex-1 sm:flex-none">
                             {bids?.map((bid) => (
                                 <BidsTable key={bid._id} bid={bid}></BidsTable>
-                                // <div key={bid._id} className="flex flex-col xl:flex-row items-start xl:items-center justify-start xl:justify-between border border-gray-100 hover:bg-[#19a4630c] px-10 py-5 duration-300">
-                                //     <img className="h-10 mr-2" src={bid.title} alt="" />
-                                //     <h5 className="w-full mr-10">{bid.email}</h5>
-                                //     <h5 className="w-full mr-10">{bid.deadline}</h5>
-
-
-                                // </div>
+                               
                             ))}
                         </div>
                     </div>
