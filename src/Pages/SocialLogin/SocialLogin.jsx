@@ -1,6 +1,6 @@
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
@@ -29,7 +29,9 @@ const SocialLogin = () => {
                 toast.error( error);
             })
     }
-
+    useEffect(() => {
+        document.title = " Job Search | Social Login ";
+    }, []);
     return (
         <>
             <div className="divider text-center  font-semibold  ">Continue with</div>

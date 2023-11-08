@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 
 const Banner = () => {
+    useEffect(() => {
+        document.title = " Job Search | Carousel ";
+    }, []);
     return (
         <div>
             

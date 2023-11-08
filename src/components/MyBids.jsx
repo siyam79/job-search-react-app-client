@@ -17,7 +17,14 @@ const MyBids = () => {
             .then(res => res.json())
             .then(data => setBids(data))
     }, [url])
+
     console.log(bids);
+    useEffect(() => {
+        document.title = " Job Search | My Bids ";
+    }, []);
+
+    
+
     return (
         <div className=" w-full py-10  mx-auto duration-300">
             <body className="flex items-center justify-center">

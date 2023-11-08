@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import useAuth from '../Hooks/useAuth';
 import { Link } from 'react-router-dom';
 import { BiBarChartAlt } from "react-icons/bi";
+import { useEffect } from 'react';
 
 
 const Job = ({ job }) => {
@@ -10,7 +11,11 @@ const Job = ({ job }) => {
     const userEmail = user?.email
     console.log(userEmail);
 
-    const { _id , title, deadline, description, minimumPrice, maximumPrice, email } = job || {};
+    const { _id, title, deadline, description, minimumPrice, maximumPrice, email } = job || {};
+    useEffect(() => {
+        document.title = " Job Search | Job ";
+    }, []);
+
     // console.log({minimumPrice});
     return (
         <div>
@@ -21,7 +26,7 @@ const Job = ({ job }) => {
                     </h2>
                     <div className=' flex justify-between items-center '>
                         <h1 className='text-lg font-bold '>Date : <span className="badge badge-secondary text-white ">{deadline}</span> </h1>
-                       <BiBarChartAlt className=' text-4xl '></BiBarChartAlt>
+                        <BiBarChartAlt className=' text-4xl '></BiBarChartAlt>
                     </div>
                     <p>{description}</p>
                     <div className=" justify-end">

@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { ToastContainer, toast, } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../Hooks/useAuth";
+import { useEffect } from "react";
 
 const JobDetails = () => {
     const navegate = useNavigate()
@@ -66,7 +67,9 @@ const JobDetails = () => {
 
     }
 
-
+    useEffect(() => {
+        document.title = " Job Search | Job Details ";
+    }, []);
     return (
         <div>
             <div className="card lg:w-[70%] w-full mx-auto card-side bg-base-100 shadow-xl">

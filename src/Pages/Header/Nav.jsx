@@ -127,6 +127,10 @@ const Nav = () => {
             </NavLink>
         )}
     </>
+
+useEffect(() => {
+    document.title = " Job Search | Navbar";
+}, []);
     return (
 
         <div>

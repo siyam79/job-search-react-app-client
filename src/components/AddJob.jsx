@@ -1,6 +1,7 @@
 import { ToastContainer, toast, } from "react-toastify";
 import useAuth from "../Hooks/useAuth";
 import {  useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 
 const AddJob = () => {
@@ -57,6 +58,13 @@ const AddJob = () => {
             })
 
     }
+
+    useEffect(() => {
+        document.title = " Job Search | Add Job ";
+    }, []);
+
+
+
 
     return (
         <div>

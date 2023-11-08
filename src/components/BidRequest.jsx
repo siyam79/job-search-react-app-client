@@ -7,11 +7,11 @@ const BidRequests = () => {
 
     const req = useLoaderData();
     const [bidRequests, setBidRequests] = useState([]);
-   
+
     const { user } = useAuth()
 
     useEffect(() => {
-        const filter = req.filter((item) => item.email === user?.email);
+        const filter = req.filter((item) => item.email !== user?.email);
         setBidRequests(filter.map(bid => ({ ...bid, status: "Pending", buttonsVisible: true })));
     }, [req, user.email]);
 
@@ -48,7 +48,9 @@ const BidRequests = () => {
             )
         );
     };
-
+    useEffect(() => {
+        document.title = " Job Search | Bid Request ";
+    }, []);
     return (
         <div className="w-full py-10 mx-auto duration-300">
             <body className="flex items-center justify-center">
@@ -82,12 +84,13 @@ const BidRequests = () => {
                                             Accept
                                         </button>
                                     )}
+
                                     {bid.buttonsVisible && (
                                         <button className="bg-red-600 px-2 py-2 text-white rounded-lg font-bold " onClick={() => handleReject(bid._id)}>
                                             Reject
                                         </button>
                                     )}
-                                    
+
                                 </div>
                             ))}
                         </div>

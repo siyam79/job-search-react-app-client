@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer, toast} from "react-toastify";
 
@@ -46,7 +47,9 @@ const UpdateJob = () => {
                 }
             })
     }
-
+    useEffect(() => {
+        document.title = " Job Search | Update Job ";
+    }, []);
 
     return (
         <div>

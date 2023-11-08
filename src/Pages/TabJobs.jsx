@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import Job from "./Job";
 let cetegoryName = [
@@ -18,6 +18,9 @@ const TabJobs = ({ jobs }) => {
 
     const jobsCurrentTab = jobs?.filter(job => job.category === activeTab);
 
+    useEffect(() => {
+        document.title = " Job Search | Tab Job ";
+    }, []);
     return (
         <div className="flex flex-col items-center justify-center py-10">
             <div className="flex space-x-1 mb-2">

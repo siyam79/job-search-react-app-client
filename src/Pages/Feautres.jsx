@@ -2,10 +2,15 @@ import logo1 from "../assets/creative.jpg"
 import logo2 from "../assets/code2.jpg"
 import logo4 from "../assets/abstract-4jpg.jpg"
 import logo3 from "../assets/flat-design3.jpg"
+import { useEffect } from "react";
 
 
 
 const Feautres = () => {
+
+    useEffect(() => {
+        document.title = " Job Search | Features ";
+    }, []);
     return (
         <div className="my-10 md:px-10 px-4 w-full mx-auto ">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-10  ">

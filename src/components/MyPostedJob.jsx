@@ -51,6 +51,9 @@ const MyPostedJob = () => {
         })
 
     }
+    useEffect(() => {
+        document.title = " Job Search | My Post Job";
+    }, []);
     return (
         <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
             {/* {

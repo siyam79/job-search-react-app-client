@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from '../Hooks/useAuth';
 import SocialLogin from '../Pages/SocialLogin/SocialLogin';
 
@@ -54,6 +54,9 @@ const Register = () => {
             })
 
     }
+    useEffect(() => {
+        document.title = " Job Search | Register";
+    }, []);
     return (
         <div className=" relative md:w-[28rem]  mx-auto p-2  rounded-lg shadow-2xl mt-1 h-full  ">
             <h1 className="text-3xl text-center text-pink-600 font-bold  mt-4 "> Register Now  </h1>

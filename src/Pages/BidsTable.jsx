@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 const BidsTable = ({ bid }) => {
     console.log(bid);
     const { deadline, title, buyerEmail } = bid || {}
 
+    useEffect(() => {
+        document.title = " Job Search | Bid Table ";
+    }, []);
     return (
 
         <div className="flex flex-col xl:flex-row items-start xl:items-center justify-start xl:justify-between border border-gray-100 hover:bg-[#19a4630c] px-10 py-5 duration-300">

@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/attachment_117444264-removebg-preview.png"
+import { useEffect } from "react";
 const Footer = () => {
+
+    useEffect(() => {
+        document.title = " Job Search | Footer ";
+    }, []);
     return (
         <div>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-2 ">

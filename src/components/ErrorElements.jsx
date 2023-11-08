@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ErrorElements = () => {
+    useEffect(() => {
+        document.title = " Job Search | Error Elements ";
+    }, []);
     return (
         <div>
             <div>

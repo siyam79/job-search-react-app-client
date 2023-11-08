@@ -1,8 +1,11 @@
+import { useEffect } from "react";
 import carrer from "../assets/carrer.png"
 
 const Blogs = () => {
 
-
+    useEffect(() => {
+        document.title = " Job Search | Blog ";
+    }, []);
     return (
         <div className=" md:px-2 p-4 w-full mx-auto mt-6 hover:translate-y-4 transition-all duration-500 ">
             <div className="gradientBg rounded-xl  rounded-br-[80px] md:p-9 px-4 py-9  ">

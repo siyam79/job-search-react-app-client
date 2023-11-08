@@ -1,10 +1,13 @@
 import { BiLogoGmail } from 'react-icons/bi';
 import { AiOutlinePhone } from 'react-icons/ai';
 import { FaRegAddressCard } from 'react-icons/fa';
+import { useEffect } from 'react';
 
 
 const Contact = () => {
-
+    useEffect(() => {
+        document.title = " Job Search | Contact ";
+    }, []);
     return (
         <section id="contact" className=" py-10 px-3  bg-slate-900 ">
             <div className=" text-center mt-8 ">

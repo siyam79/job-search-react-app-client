@@ -3,7 +3,12 @@ import { AiOutlinePoundCircle, AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { SiSecurityscorecard } from 'react-icons/si';
 import { FaBahai } from 'react-icons/fa';
 import { motion } from "framer-motion"
+import { useEffect } from 'react';
 const About = () => {
+
+    useEffect(() => {
+        document.title = " Job Search | About ";
+    }, []);
     return (
         <div>
             <div className="px-4 lg:px-6 w-[90%] mx-auto my-8">
