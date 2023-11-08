@@ -63,7 +63,7 @@ const MyPostedJob = () => {
             {
                 myPostJobs?.map(job => <div key={job._id} >
 
-                    <div className="card w-96 h-[300px] bg-base-100 shadow-xl">
+                    <div className="card w-96 h-[350px] bg-base-100 shadow-xl">
                         <div className="card-body">
                             <h2 className="card-title truncate">
                                 {job.title}

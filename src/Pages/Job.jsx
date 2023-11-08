@@ -6,7 +6,7 @@ const Job = ({ job }) => {
     // console.log({minimumPrice});
     return (
         <div>
-            <div className="card w-96 bg-base-100 h-[300px] shadow-xl ">
+            <div className="card w-96 bg-base-100 h-[350px] shadow-xl ">
                 <div className="card-body">
                     <h2 className="card-title truncate ">
                         {title}

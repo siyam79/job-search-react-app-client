@@ -16,7 +16,7 @@ const TabJobs = ({ jobs }) => {
 
     let [activeTab, setActiveTab] = useState(cetegoryName[0].id);
 
-    const jobsCurrentTab = jobs.filter(job => job.category === activeTab);
+    const jobsCurrentTab = jobs?.filter(job => job.category === activeTab);
 
     return (
         <div className="flex flex-col items-center justify-center py-10">

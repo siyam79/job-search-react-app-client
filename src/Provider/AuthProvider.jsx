@@ -94,7 +94,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             return unsubscribe();
         };
-    }, []);
+    }, [user?.email]);
 
 
 
