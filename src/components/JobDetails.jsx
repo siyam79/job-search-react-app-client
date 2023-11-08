@@ -21,11 +21,13 @@ const JobDetails = () => {
         e.preventDefault();
 
         const form = e.target;
+
         const buyerEmail = form.buyerEmail.value;
         const email = form.email.value;
         const price = form.price.value;
         const deadline = form.deadline.value;
         const title = form.title.value;
+        const status = 'pending'
 
 
         const addBidJob = {
@@ -33,7 +35,8 @@ const JobDetails = () => {
             deadline,
             email,
             price,
-            title
+            title,
+            status
         };
         console.log(addBidJob);
 

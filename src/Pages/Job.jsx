@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
 
     const { user } = useAuth()
-    const userEmail = user.email
+    const userEmail = user?.email
     console.log(userEmail);
 
-    const { _id, title, deadline, description, minimumPrice, maximumPrice, email } = job || {};
+    const { _id , title, deadline, description, minimumPrice, maximumPrice, email } = job || {};
     // console.log({minimumPrice});
     return (
         <div>

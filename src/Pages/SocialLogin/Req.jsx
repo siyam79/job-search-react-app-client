@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+// import { toast } from "react-toastify";
+import ReqData from "../ReqData";
 
 const Req = () => {
     const [bidRequests, setBidRequests] = useState([]);
@@ -10,19 +12,47 @@ const Req = () => {
     useEffect(() => {
         const filter = req.filter((item) => item.email === user?.email);
         setBidRequests(filter.map(bid => ({ ...bid, status: "Pending", buttonsVisible: true })));
-    }, []);
+    }, [req, user.email]);
 
-    const handleApprove = (bidId) => {
-        setBidRequests(prevState => prevState.map(bid => (
-            bid._id === bidId ? { ...bid, status: "Approved", buttonsVisible: false } : bid
-        )));
-    };
+    // const handleUpdateBid = e => {
+    //     e.preventDefault();
+       
+    //     const updateBid = {
+    //         status: "completed"
+    //     }
+    // }
 
-    const handleReject = (bidId) => {
-        setBidRequests(prevState => prevState.map(bid => (
-            bid._id === bidId ? { ...bid, status: "Rejected", buttonsVisible: false } : bid
-        )));
-    };
+    // fetch(`http://localhost:5000/updateStatus/${_id}`, {
+    //     method: "PUT",
+    //     headers: {
+    //         "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify(updateBid),
+    // })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         if (data.modifiedCount > 0) {
+    //             toast.success(" Job Update Success Full ", {
+    //                 position: "top-left"
+    //             })
+    //         }
+    //     })
+
+
+
+
+    // const handleApprove = (bidId) => {
+    //     setBidRequests(prevState => prevState.map(bid => (
+    //         bid._id === bidId ? { ...bid, status: "Approved", buttonsVisible: false } : bid
+    //     )));
+    // };
+
+    // const handleReject = (bidId) => {
+    //     setBidRequests(prevState => prevState.map(bid => (
+    //         bid._id === bidId ? { ...bid, status: "Rejected", buttonsVisible: false } : bid
+    //     )));
+    // };
 
     return (
         <div className="w-full py-10 mx-auto duration-300">
@@ -42,28 +72,9 @@ const Req = () => {
                             </div>
                         </div>
                         <div className="flex-1 sm:flex-none">
-                            {bidRequests?.map((bid) => (
-                                <div
-                                    key={bid._id}
-                                    className={`flex flex-col xl:flex-row items-start xl:items-center justify-start xl:justify-between border border-gray-100 hover:bg-[#19a4630c] px-10 py-5 duration-300 ${bid.status === "Rejected" ? "bg-red-100" : "bg-green-100"
-                                        }`}
-                                >
-                                    <h5 className="w-full mr-10">{bid.title}</h5>
-                                    <h5 className="w-full mr-10">{bid.email}</h5>
-                                    <h5 className="w-full mr-10">{bid.deadline}</h5>
-                                    {bid.buttonsVisible && (
-                                        <button className="btn" onClick={() => handleApprove(bid._id)}>
-                                            Approve
-                                        </button>
-                                    )}
-                                    {bid.buttonsVisible && (
-                                        <button className="ml-5 btn" onClick={() => handleReject(bid._id)}>
-                                            Reject
-                                        </button>
-                                    )}
-                                    <p>Status: {bid.status}</p>
-                                </div>
-                            ))}
+                            {bidRequests?.map(reqJob => <ReqData key={reqJob._id} reqJob={reqJob}></ReqData>) 
+                               
+                            }
                         </div>
                     </div>
                 </div>

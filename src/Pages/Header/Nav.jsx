@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/attachment_117444264-removebg-preview.png"
-
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import useAuth from "../../Hooks/useAuth";
 import { useEffect, useState } from "react";
+import useAuth from "../../Hooks/useAuth";
 
 
 const Nav = () => {
@@ -121,7 +120,7 @@ const Nav = () => {
             <NavLink
                 to="/login"
                 className={({ isActive }) =>
-                    isActive ? 'btn btn-primary btn-sm' : 'btn btn-ghost btn-sm'
+                    isActive ? 'bg-fuchsia-600 text-white  px-2 rounded-md' : ""
                 }
             >
                 Login

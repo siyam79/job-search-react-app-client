@@ -1,6 +1,7 @@
-// import NavBar from "./NavBar";
 
 import Nav from "./Nav";
+
+
 
 const Header = () => {
     return (
