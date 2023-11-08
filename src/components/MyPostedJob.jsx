@@ -11,7 +11,7 @@ const MyPostedJob = () => {
 
     const [myPostJobs, setmyPostJobs] = useState()
 
-    const url = `http://localhost:5000/job?email=${user?.email}`
+    const url = `https://assingment-server-11-henna.vercel.app/job?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -31,7 +31,7 @@ const MyPostedJob = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/deleteJob/${id}`, {
+                fetch(`https://assingment-server-11-henna.vercel.app/deleteJob/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

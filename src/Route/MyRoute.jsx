@@ -24,7 +24,7 @@ const MyRoute = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/getJob')
+                loader: () => fetch('https://assingment-server-11-henna.vercel.app/getJob')
             },
             {
                 path: '/addjob',
@@ -42,7 +42,7 @@ const MyRoute = createBrowserRouter([
             {
                 path: '/bidrequest',
                 element: <PrivateRoute><BidRequests></BidRequests></PrivateRoute>,
-               loader : ()=>fetch('http://localhost:5000/reqJob')
+               loader : ()=>fetch('https://assingment-server-11-henna.vercel.app/reqJob')
             },
             {
                 path: '/login',
@@ -55,12 +55,12 @@ const MyRoute = createBrowserRouter([
             {
                 path: '/job/:id',
                 element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
-               loader: ({params}) => fetch(`http://localhost:5000/job/${params.id}`)
+               loader: ({params}) => fetch(`https://assingment-server-11-henna.vercel.app/job/${params.id}`)
             },
             {
                 path: '/updateJob/:id',
                 element: <PrivateRoute><UpdateJob></UpdateJob></PrivateRoute>,
-               loader: ({params}) => fetch(`http://localhost:5000/job/${params.id}`)
+               loader: ({params}) => fetch(`https://assingment-server-11-henna.vercel.app/job/${params.id}`)
             },
            
 

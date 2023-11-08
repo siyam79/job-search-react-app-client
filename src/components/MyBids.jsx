@@ -10,7 +10,7 @@ const MyBids = () => {
 
     const [bids, setBids] = useState([])
 
-    const url = `http://localhost:5000/bidJobs?email=${user?.email}`
+    const url = `https://assingment-server-11-henna.vercel.app/bidJobs?email=${user?.email}`
 
     useEffect(() => {
         fetch(url , {credentials:"include"})

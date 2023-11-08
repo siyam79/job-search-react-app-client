@@ -41,7 +41,7 @@ const JobDetails = () => {
         };
         console.log(addBidJob);
 
-        fetch('http://localhost:5000/addBidJob', {
+        fetch('https://assingment-server-11-henna.vercel.app/addBidJob', {
             method: 'POST',
             headers: {
                 'content-type': "application/json",

@@ -30,7 +30,7 @@ const UpdateJob = () => {
     };
     console.log(updateJob);
 
-        fetch(`http://localhost:5000/updateJob/${_id}`, {
+        fetch(`https://assingment-server-11-henna.vercel.app/updateJob/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

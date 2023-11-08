@@ -16,7 +16,7 @@ const BidRequests = () => {
     }, [req, user.email]);
 
     const handleApprove = (bidReqId) => {
-        fetch(`http://localhost:5000/updateStatus/${bidReqId}`, {
+        fetch(`https://assingment-server-11-henna.vercel.app/updateStatus/${bidReqId}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ status: true }),
@@ -33,7 +33,7 @@ const BidRequests = () => {
         );
     };
     const handleReject = (bidReqId) => {
-        fetch(`http://localhost:5000/status/${bidReqId}`, {
+        fetch(`https://assingment-server-11-henna.vercel.app/status/${bidReqId}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ status: false }),

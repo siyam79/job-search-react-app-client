@@ -36,7 +36,7 @@ const AddJob = () => {
         };
         console.log(addJob);
 
-        fetch('http://localhost:5000/addJob', {
+        fetch('https://assingment-server-11-henna.vercel.app/addJob', {
             method: 'POST',
             headers: {
                 'content-type': "application/json",
