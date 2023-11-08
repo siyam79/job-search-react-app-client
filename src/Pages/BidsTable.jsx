@@ -9,7 +9,7 @@ const BidsTable = ({ bid }) => {
             <h5 className="w-full mr-10">{title}</h5>
             <h5 className="w-full mr-10">{email}</h5>
             <h5 className="w-full mr-10">{deadline}</h5>
-            <button> Approve </button>
+            <button> Pending </button>
         </div>
 
     );
