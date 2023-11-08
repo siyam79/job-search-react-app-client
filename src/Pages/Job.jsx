@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import useAuth from '../Hooks/useAuth';
 import { Link } from 'react-router-dom';
+import { BiBarChartAlt } from "react-icons/bi";
+
 
 const Job = ({ job }) => {
 
@@ -17,8 +19,9 @@ const Job = ({ job }) => {
                     <h2 className="card-title truncate ">
                         {title}
                     </h2>
-                    <div>
+                    <div className=' flex justify-between items-center '>
                         <h1 className='text-lg font-bold '>Date : <span className="badge badge-secondary text-white ">{deadline}</span> </h1>
+                       <BiBarChartAlt className=' text-4xl '></BiBarChartAlt>
                     </div>
                     <p>{description}</p>
                     <div className=" justify-end">
