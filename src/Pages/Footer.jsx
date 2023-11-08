@@ -39,7 +39,7 @@ const Footer = () => {
                 <aside>
                 <p>JobGine@Gmail.com</p>
                     <p>Online Job Marcket Place </p>
-                    <img className="w-48  " src={logo} alt="" />
+                    <img className="w-48" src={logo} alt="" />
                 </aside>
             </footer>
         </div >

@@ -4,19 +4,17 @@ import Home from "../components/Home";
 import AddJob from "../components/AddJob";
 import MyPostedJob from "../components/MyPostedJob";
 import MyBids from "../components/MyBids";
-import BidRequest from "../components/BidRequest";
+// import BidRequest from "../components/BidRequest";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import ErrorElements from "../components/ErrorElements";
 import PrivateRoute from "../Provider/PrivateRoute";
 import JobDetails from "../components/JobDetails";
 import UpdateJob from "../Pages/PostedJob/UpdateJob";
-
-
-
-
+import Req from "../Pages/SocialLogin/Req";
 
 const MyRoute = createBrowserRouter([
+   
     {
         path: '/',
         element: <Mainlayout></Mainlayout>,
@@ -42,7 +40,8 @@ const MyRoute = createBrowserRouter([
             },
             {
                 path: '/bidrequest',
-                element: <BidRequest></BidRequest>
+                element: <PrivateRoute><Req></Req></PrivateRoute>,
+               loader : ()=>fetch('http://localhost:5000/reqJob')
             },
             {
                 path: '/login',

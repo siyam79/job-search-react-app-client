@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 
 const Job = ({ job }) => {
-    const { _id, title, deadline, description, minimumPrice, maximumPrice, } = job || {};
+
+    const { user } = useAuth()
+    const userEmail = user.email
+    console.log(userEmail);
+
+    const { _id, title, deadline, description, minimumPrice, maximumPrice, email } = job || {};
     // console.log({minimumPrice});
     return (
         <div>
@@ -18,9 +24,21 @@ const Job = ({ job }) => {
                     <div className=" justify-end">
                         <div className=" flex ">
                             <p className="text-xl font-bold "> salary : <span>${minimumPrice} </span> - $<span>{maximumPrice}</span> </p>
-                            <Link to={`/job/${_id}`}>
+                            {/* {
+                                userEmail !== email && <Link to={`/job/${_id}`}>
                                 <button className="badge badge-outline px-6 py-4 font-bold text-lg "> Bid Now  </button>
-                            </Link>
+                            </Link> : 
+                            } */}
+
+                            {userEmail !== email ? (
+                                <Link to={`/job/${_id}`}>
+                                    <button className="badge badge-outline px-6 py-4 font-bold text-lg">Bid Now</button>
+                                </Link>
+                            ) : (
+                                <button className="badge badge-outline px-6 py-4 font-bold text-lg" disabled>
+                                    Bid Now
+                                </button>
+                            )}
                         </div>
                     </div>
 
