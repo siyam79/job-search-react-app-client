@@ -2,6 +2,21 @@
 ### Project Name ::  Job Search
 ## projects live link ... >   https://job-assingments-11.web.app/
 
+## uses tools 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Client site uses tools
+### react.js
+### tailwind.css
+### firebase
+### jwt localstorage set token 
+### others nmp package 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+## Server site uses tools 
+
+#### node.js 
+#### express.js 
+#### mongodb 
 
 
 
