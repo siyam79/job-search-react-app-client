@@ -1,9 +1,10 @@
 
 ### Project Name ::  Job Search
+### The main point of the project
+#### Job Search Project is a website that provides an opportunity for users to search for jobs in various categories and post jobs for companies
+
 ## projects live link ... >   https://job-assingments-11.web.app/
 
-## uses tools 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ## Client site Unique Technology
 ### react.js / tailwind.css /  firebase / jwt cokies set token / aos animation / vercel / others nmp package 
 
@@ -21,8 +22,12 @@
 
 
 
-
-
+### What the project is about and what problem it is solving 
+#### The project is an online platform or website that provides users with the opportunity to search for jobs and allows companies to post job opportunities. Through this project, users can explore jobs in various categories and potentially attain higher positions or new career paths. Companies have the capability to post job advertisements on this platform, providing relevant information based on individual preferences. This project facilitates users in finding essential job-related information, and companies can target suitable candidates for their specific job requirements.
+#### Job Search for Users
+#### Promotion and Marketing for Interested Companies
+#### Communication and News Between Users and Companies
+#### User-Friendly User Interface
 
 
 
