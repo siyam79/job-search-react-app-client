@@ -4,25 +4,32 @@
 
 ## uses tools 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# Client site uses tools
-### react.js
-### tailwind.css
-### firebase
-### jwt localstorage set token 
-### others nmp package 
+## Client site Unique Technology
+### react.js / tailwind.css /  firebase / jwt cokies set token / aos animation / vercel / others nmp package 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-## Server site uses tools 
-
-#### node.js 
-#### express.js 
-#### mongodb 
+## Server site Unique Technology
+#### node.js  express.js / mongodb / Cors / vercelo
 
 
+### Unique Feature 1
+#### When the user clicks on the "Bid Now" button, a form will be displayed. The user can enter their proposed rate, specify the price range, and outline the parameters for completing the task. If a user clicks on the "View Bids" button, they will be directed to a page where all submitted bids are visible. Only the person who posted the job can manage the bids, having the authority to accept or reject them.
+
+
+### Unique Feature 1
+#### Upon clicking the "Accept" button for a specific bid, the user expressing interest in the job will transition to a pending status. If the employer confirms the acceptance, the status will change to complete. Conversely, if the "Reject" button is clicked, the bid for the job will be canceled, and the corresponding data will be removed from consideration. This process ensures effective handling of bids and facilitates clear communication between job posters and potential bidders
 
 
 
 
+
+
+
+
+
+
+
+......................................................................
 ## Features 
 
 ### 1   We have a little website on Job Server and here we provide job services in three categories or maybe their other categories like Web Development Digital Marketing Graphics Design Our jobs are arranged category wise and according to their tabs user can see the jobs of any category.
